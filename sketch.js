@@ -115,3 +115,9 @@ function draw() {
 function mouseReleased(){
   launcherObject.fly();
 }
+function keyPressed(){
+	if(keyCode === 32){
+		Matter.body.setPosition(stoneObj.body, {x:235, y:420})
+		launcherObj.attach(stoneObj.body)
+	}
+}
