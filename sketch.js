@@ -40,7 +40,7 @@ function setup() {
 
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
-  launcherObject = new Launcher(stoneObj,{x:235,y:420})
+  launcherObject = new Launcher(stoneObj.body,{x:235,y:420})
 
 
 	Engine.run(engine);
@@ -113,5 +113,5 @@ function draw() {
     Matter.Body.setPosition(stoneObj.body,{x:mouseX,y:mouseY})
 }
 function mouseReleased(){
-  js/launcherObject.fly();
+  launcherObject.fly();
 }
